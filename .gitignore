@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Udemy_MicroservicesArch/src/Catalog/Catalog.API/bin/Debug
+/Udemy_MicroservicesArch/src/Catalog/Catalog.API/obj
+/Udemy_MicroservicesArch/.vs/Udemy_MicroservicesArch/config/applicationhost.config
+/Udemy_MicroservicesArch/.vs/Udemy_MicroservicesArch/DesignTimeBuild/.dtbcache.v2
+/Udemy_MicroservicesArch/.vs/Udemy_MicroservicesArch/v16/.suo
