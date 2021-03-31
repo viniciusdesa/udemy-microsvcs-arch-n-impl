@@ -1,0 +1,15 @@
+1. Abrir terminal do redis (client)
+	redis-cli
+
+2. Verificar se o server ta online
+	ping
+
+3. Criar uma nova key
+	Comando: set <key> <value>
+	Ex: set key value
+	Retorno esperado: OK
+
+4. Ler valor de uma key
+	Comando: get <key>
+	Retorno: <value>
+	Ex: get key (Retorna "value")

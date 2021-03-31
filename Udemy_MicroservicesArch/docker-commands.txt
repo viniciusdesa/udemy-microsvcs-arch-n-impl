@@ -1,0 +1,46 @@
+
+
+Docker Compose
+
+1. Compilar imagem, gerar e startar container(s)
+
+docker-compose -f docker-compose.yml -f docker-compose.override.yml up -d
+
+OBS: executar este comando estando na pasta do projeto docker-compose, que é a pasta raiz da solution.
+Lembrando que os arquivos do docker-compose são criados na raiz da solution.
+
+2. Parar e Remover os containers em execução
+
+docker-compose -f docker-compose.yml -f docker-compose.override.yml down
+
+3. Listar os containers
+
+docker ps
+
+4. Listar imagens
+
+docker images
+
+5. Lista imagens no computador local
+docker ps -aq
+
+6. Para todos os containers rodando na máquina local
+docker stop $(docker ps -aq)
+
+7. Remove todos os containers no computador
+docker rm $(docker ps -aq)
+
+8. Remove todas as imagens no computador
+docker rmi $(docker images -q)
+
+9. Dá uma limpada geral (remove todos os containers parados, redes não usadas por algum container, dangling images, dangling build cache)
+docker container prune
+
+10. Rodar um container com o REDIS
+docker run -d -p 6379:6379 --name aspnetrun-redis redis
+
+11. Obter os logs de um container
+docker logs -f aspnetrun-redis
+
+12. Inspecionar no terminal interativo a imagem
+docker exec -it aspnetrun-redis /bin/bash

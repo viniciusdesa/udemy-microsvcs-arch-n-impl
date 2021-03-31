@@ -7,3 +7,6 @@
 /Udemy_MicroservicesArch/.vs/Udemy_MicroservicesArch/config/applicationhost.config
 /Udemy_MicroservicesArch/.vs/Udemy_MicroservicesArch/DesignTimeBuild/.dtbcache.v2
 /Udemy_MicroservicesArch/.vs/Udemy_MicroservicesArch/v16/.suo
+/Udemy_MicroservicesArch/obj
+/Udemy_MicroservicesArch/src/Basket/Basket.API/bin/Debug/net5.0
+/Udemy_MicroservicesArch/src/Basket/Basket.API/obj

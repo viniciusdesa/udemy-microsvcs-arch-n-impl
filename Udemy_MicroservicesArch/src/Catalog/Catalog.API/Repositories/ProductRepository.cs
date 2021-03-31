@@ -34,7 +34,7 @@ namespace Catalog.API.Repositories
                             .FirstOrDefaultAsync();
         }
 
-        public async Task<IEnumerable<Product>> GetProductsByName(string name)
+        public async Task<IEnumerable<Product>> GetProductByName(string name)
         {
             FilterDefinition<Product> filter = Builders<Product>.Filter.ElemMatch(p => p.Name, name);
 
@@ -44,9 +44,9 @@ namespace Catalog.API.Repositories
                             .ToListAsync();
         }
 
-        public async Task<IEnumerable<Product>> GetProductsByCategory(string categoryName)
+        public async Task<IEnumerable<Product>> GetProductByCategory(string categoryName)
         {
-            FilterDefinition<Product> filter = Builders<Product>.Filter.ElemMatch(p => p.Category, categoryName);
+            FilterDefinition<Product> filter = Builders<Product>.Filter.Eq(p => p.Category, categoryName);
 
             return await _context
                             .Products
@@ -54,12 +54,12 @@ namespace Catalog.API.Repositories
                             .ToListAsync();
         }
 
-        public async Task Create(Product product)
+        public async Task CreateProduct(Product product)
         {
             await _context.Products.InsertOneAsync(product);
         }
 
-        public async Task<bool> Update(Product product)
+        public async Task<bool> UpdateProduct(Product product)
         {
             var updateResult = await _context
                                             .Products
@@ -70,7 +70,7 @@ namespace Catalog.API.Repositories
                     && updateResult.ModifiedCount > 0;
         }
 
-        public async Task<bool> Delete(string id)
+        public async Task<bool> DeleteProduct(string id)
         {
             FilterDefinition<Product> filter = Builders<Product>.Filter.Eq(p => p.Id, id);
 
