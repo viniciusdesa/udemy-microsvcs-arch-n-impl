@@ -12,3 +12,5 @@
 /Udemy_MicroservicesArch/src/Basket/Basket.API/obj
 /Udemy_MicroservicesArch/src/Discount/Discount.API/bin/Debug/net5.0
 /Udemy_MicroservicesArch/src/Discount/Discount.API/obj
+/Udemy_MicroservicesArch/src/Discount/Discount.Grpc/bin/Debug/net5.0
+/Udemy_MicroservicesArch/src/Discount/Discount.Grpc/obj
